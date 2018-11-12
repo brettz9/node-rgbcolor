@@ -1,14 +1,52 @@
 {
 	"name": "rgbcolor",
 	"description": "A module to parse color values",
-	"version": "1.0.1",
+	"version": "2.0.0",
+	"main": "dist/index-umd.js",
+	"module": "dist/index-es.js",
 	"author": "Sebastian Vollnhals <sebastian@vollnhals.info>",
-	"main": "./index.js",
+	"contributors": [
+		"Brett Zamir"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/yetzt/node-rgbcolor.git"
 	},
-	"keywords": ["rgb", "color", "rgbcolor"],
+	"homepage": "https://github.com/yetzt/node-rgbcolor/",
+	"bugs": "https://github.com/yetzt/node-rgbcolor/issues",
+	"keywords": [
+		"rgb",
+		"color",
+		"rgbcolor"
+	],
 	"license": "MIT OR SEE LICENSE IN FEEL-FREE.md",
-	"engines": { "node": ">= 0.8.15" }
+	"engines": {
+		"node": ">= 4.0.0"
+	},
+	"scripts": {
+		"eslint": "eslint --report-unused-disable-directives .",
+		"rollup": "rollup -c",
+		"test": "npx babel-node --plugins @babel/plugin-transform-modules-commonjs test/test.js"
+	},
+	"browserslist": "cover 100%",
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.1.6",
+		"@babel/node": "^7.0.0",
+		"@babel/plugin-transform-modules-commonjs": "^7.1.0",
+		"@babel/preset-env": "^7.1.6",
+		"eslint": "^5.9.0",
+		"eslint-config-ash-nazg": "0.0.4",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-compat": "^2.6.3",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsdoc": "git+https://github.com/brettz9/eslint-plugin-jsdoc.git#Deploy",
+		"eslint-plugin-markdown": "^1.0.0-rc.0",
+		"eslint-plugin-node": "^8.0.0",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"rollup": "^0.67.1",
+		"rollup-plugin-babel": "^4.0.3",
+		"rollup-plugin-terser": "^3.0.0"
+	}
 }
